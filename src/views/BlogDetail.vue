@@ -19,7 +19,8 @@
 
 <script>
   import 'github-markdown-css'
-  import Header from "../components/Header";
+  import Header from "../components/Header.vue";
+  import MarkdownIt from 'markdown-it'
 
   export default {
     name: "BlogDetail.vue",
@@ -43,8 +44,7 @@
         _this.blog.id = blog.id
         _this.blog.title = blog.title
 
-        var MardownIt = require("markdown-it")
-        var md = new MardownIt()
+        const md = new MarkdownIt()
 
         var result = md.render(blog.content)
         _this.blog.content = result

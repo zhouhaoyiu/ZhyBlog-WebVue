@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Element from 'element-ui'
+import { ElMessage } from 'element-plus'
 import router from './router'
 import store from './store'
 
@@ -22,7 +22,7 @@ axios.interceptors.response.use(response => {
       return response
     } else {
 
-      Element.Message.error('错了哦，这是一条错误消息', {duration: 3 * 1000})
+      ElMessage.error('错了哦，这是一条错误消息')
 
       return Promise.reject(response.data.msg)
     }
@@ -38,7 +38,7 @@ axios.interceptors.response.use(response => {
       router.push("/login")
     }
 
-    Element.Message.error(error.message, {duration: 3 * 1000})
+    ElMessage.error(error.message)
     return Promise.reject(error)
   }
 )

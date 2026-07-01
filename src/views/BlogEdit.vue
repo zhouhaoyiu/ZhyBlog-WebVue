@@ -14,7 +14,7 @@
         </el-form-item>
 
         <el-form-item label="内容" prop="content">
-          <mavon-editor v-model="ruleForm.content"></mavon-editor>
+          <el-input v-model="ruleForm.content" type="textarea" :rows="12"></el-input>
         </el-form-item>
 
         <el-form-item>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-  import Header from "../components/Header";
+  import Header from "../components/Header.vue";
   export default {
     name: "BlogEdit.vue",
     components: {Header},
