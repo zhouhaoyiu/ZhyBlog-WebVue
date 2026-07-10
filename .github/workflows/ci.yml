@@ -16,4 +16,5 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm install
+      - run: npm install @rolldown/binding-linux-x64-gnu@1.1.4 --no-save
       - run: npm run build
