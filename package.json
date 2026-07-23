@@ -26,5 +26,5 @@
     "@rolldown/binding-linux-x64-gnu": "1.1.5",
     "lightningcss-linux-x64-gnu": "1.32.0"
   },
-  "packageManager": "pnpm@11.9.0"
+  "packageManager": "pnpm@11.15.1"
 }
